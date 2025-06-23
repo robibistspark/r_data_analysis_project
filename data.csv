@@ -1,0 +1,207 @@
+Token_ID_Greek,Token_Greek,Gospel,Token_ID_Armenian,Token_Armenian,Function,comment,Location,Greek_found,Armenian_found,where_found
+342616.0,ἀλλ’,JOHN,800741.0,ayl,SUBST,,1.13,1,1,both_langs
+342961.0,ἀλλ’,JOHN,801061.0,aył,ADVER,?,1.31,1,1,both_langs
+342531.0,ἀλλ’,JOHN,800667.0,aył,ADVER,SUBST?,1.8,1,1,both_langs
+351330.0,ἀλλὰ,JOHN,,,SUBST,,10.1,1,0,only_Gr
+351611.0,ἄλλα,JOHN,808772.0,áył,UNID,ews,10.16,1,1,both_langs
+351668.0,ἀλλ’,JOHN,808828.0,aył,SUBST,OPP?,10.18,1,1,both_langs
+351722.0,ἄλλοι,JOHN,,,UNID,,10.21,1,0,only_Gr
+351816.0,ἀλλὰ,JOHN,808963.0,Aył,ADVER,,10.26,1,1,both_langs
+351940.0,ἀλλὰ,JOHN,809081.0,ayl,SUBST,,10.33,1,1,both_langs
+351403.0,ἀλλὰ,JOHN,808583.0,aył,SUBST,,10.5,1,1,both_langs
+351459.0,ἀλλ’,JOHN,854147.0,aył,ADVER,,10.8,1,1,both_langs
+352328.0,ἀλλὰ,JOHN,809417.0,ayl,ADVER,,11.11,1,1,both_langs
+,,JOHN,809433.0,Aył,ADVER,,11.13,0,1,only_Arm
+352389.0,ἀλλὰ,JOHN,,,ADVER,,11.15,1,0,only_Gr
+,,JOHN,809558.0,aył,ADVER,ew ?,11.22,0,1,only_Arm
+352639.0,ἀλλ’,JOHN,854335.0,aył,SUBST,,11.30,1,1,both_langs
+352189.0,ἀλλ’,JOHN,809301.0,aył,SUBST,,11.4,1,1,both_langs
+352885.0,ἀλλὰ,JOHN,809918.0,aył,ADVER,,11.42,1,1,both_langs
+353071.0,ἀλλὰ,JOHN,854529.0,aył,SUBST,,11.51,1,1,both_langs
+353093.0,ἀλλ’,JOHN,854550.0,aył,SUBST,,11.52,1,1,both_langs
+353125.0,ἀλλὰ,JOHN,854573.0,aył,SUBST,OPP?,11.54,1,1,both_langs
+353517.0,ἀλλ’,JOHN,810499.0,Aył,ADVER,,12.16,1,1,both_langs
+353762.0,ἀλλὰ,JOHN,810732.0,Aył,ADVER,,12.27,1,1,both_langs
+353801.0,ἄλλοι,JOHN,,,UNID,,12.29,1,0,only_Gr
+353820.0,ἀλλὰ,JOHN,810786.0,aył,SUBST,,12.30,1,1,both_langs
+354065.0,ἀλλὰ,JOHN,810996.0,aył,ADVER,,12.42,1,1,both_langs
+354104.0,ἀλλὰ,JOHN,811032.0,ayl,SUBST,,12.44,1,1,both_langs
+354162.0,ἀλλ’,JOHN,811089.0,aył,SUBST,,12.47,1,1,both_langs
+354201.0,ἀλλ’,JOHN,811130.0,ayl,SUBST,,12.49,1,1,both_langs
+353333.0,ἀλλ’,JOHN,856629.0,aył,SUBST,,12.6,1,1,both_langs
+353397.0,ἀλλ’,JOHN,810392.0,aył,SUBST,,12.9,1,1,both_langs
+,,JOHN,856846.0,ayl,ADVER,except,13.10,0,1,only_Arm
+354593.0,ἀλλ’,JOHN,811511.0,ayl,ADVER,,13.18,1,1,both_langs
+354430.0,ἀλλὰ,JOHN,811344.0,aył,SUBST,,13.9,1,1,both_langs
+,,JOHN,857096.0,aył,SUBST,now that???,14.1,0,1,only_Arm
+,,JOHN,812089.0,aył,SUBST,,14.10,0,1,only_Arm
+355327.0,ἄλλον,JOHN,812181.0,áyl,UNID,another?,14.16,1,1,both_langs
+355532.0,ἀλλὰ,JOHN,812383.0,aył,SUBST,,14.24,1,1,both_langs
+355664.0,ἀλλ’,JOHN,812511.0,aył,ADVER,,14.31,1,1,both_langs
+,,JOHN,812805.0,aył,SUBST,,15.15,0,1,only_Arm
+356009.0,ἀλλ’,JOHN,812827.0,aył,SUBST,,15.16,1,1,both_langs
+356083.0,ἀλλ’,JOHN,857584.0,ayl,SUBST,,15.19,1,1,both_langs
+356133.0,ἀλλὰ,JOHN,812945.0,Aył,ADVER,,15.21,1,1,both_langs
+356190.0,ἄλλος,JOHN,813007.0,ayl,UNID,,15.24,1,1,both_langs
+356210.0,ἀλλ’,JOHN,813027.0,aył,ADVER,,15.25,1,1,both_langs
+356452.0,ἀλλ’,JOHN,813256.0,ayl,ADVER,,16.12,1,1,both_langs
+356481.0,ἀλλ’,JOHN,813278.0,aył,SUBST,,16.13,1,1,both_langs
+356276.0,ἀλλ’,JOHN,813088.0,Aył,ADVER,cataphoric UNID? even?,16.2,1,1,both_langs
+356641.0,ἀλλ’,JOHN,813442.0,ayl,ADVER,,16.20,1,1,both_langs
+,,JOHN,857658.0,aył,ADVER,,16.21,0,1,only_Arm
+,,JOHN,813485.0,aył,ADVER,,16.22,0,1,only_Arm
+356774.0,ἀλλὰ,JOHN,813563.0,ayl,SUBST,,16.25,1,1,both_langs
+356932.0,ἀλλὰ,JOHN,813707.0,aył,ADVER,,16.33,1,1,both_langs
+356301.0,ἀλλὰ,JOHN,813117.0,Aył,ADVER,ew,16.4,1,1,both_langs
+356349.0,ἀλλ’,JOHN,813163.0,ayl,ADVER,,16.6,1,1,both_langs
+356361.0,ἀλλ’,JOHN,813175.0,ayl,ADVER,,16.7,1,1,both_langs
+357279.0,ἀλλ’,JOHN,814034.0,aył,SUBST,,17.15,1,1,both_langs
+,,JOHN,814231.0,ayl,ADVER,OPP?,17.25,0,1,only_Arm
+357122.0,ἀλλὰ,JOHN,813876.0,aył,SUBST,,17.9,1,1,both_langs
+357812.0,ἄλλος,JOHN,,,UNID,,18.15,1,0,only_Gr
+357848.0,ἄλλος,JOHN,,,UNID,,18.16,1,0,only_Gr
+358125.0,ἀλλὰ,JOHN,858119.0,aył,SUBST,?,18.28,1,1,both_langs
+358241.0,ἄλλοι,JOHN,814950.0,aylkʻ,UNID,,18.34,1,1,both_langs
+358426.0,ἀλλὰ,JOHN,815116.0,aył,SUBST,canonical ex,18.40,1,1,both_langs
+358813.0,ἄλλους,JOHN,815513.0,ayls,UNID,,19.18,1,1,both_langs
+358895.0,ἀλλ’,JOHN,815574.0,aył,ADVER,?,19.21,1,1,both_langs
+358963.0,ἀλλὰ,JOHN,858310.0,aył,SUBST,,19.24,1,1,both_langs
+359174.0,ἄλλου,JOHN,,,UNID,,19.32,1,0,only_Gr
+359197.0,ἀλλ’,JOHN,815863.0,aył,SUBST,,19.34,1,1,both_langs
+,,JOHN,816361.0,aył,SUBST,Adver?,20.17,0,1,only_Arm
+359422.0,ἄλλον,JOHN,,,UNID,,20.2,1,0,only_Gr
+359903.0,ἄλλοι,JOHN,816527.0,aył,UNID,,20.25,1,1,both_langs
+360016.0,ἀλλὰ,JOHN,816625.0,aył,SUBST,,20.27,1,1,both_langs
+359453.0,ἄλλος,JOHN,,,UNID,,20.3,1,0,only_Gr
+360055.0,ἄλλα,JOHN,816660.0,áyl,UNID,,20.30,1,1,both_langs
+,,JOHN,816677.0,aył,ADVER,,20.31,0,1,only_Arm
+359470.0,ἄλλος,JOHN,,,UNID,,20.4,1,0,only_Gr
+359529.0,ἀλλὰ,JOHN,,,SUBST,,20.7,1,0,only_Gr
+359541.0,ἄλλος,JOHN,,,UNID,,20.8,1,0,only_Gr
+360559.0,ἄλλος,JOHN,817132.0,aylkʻ,UNID,,21.18,1,1,both_langs
+360137.0,ἄλλοι,JOHN,858553.0,áylkʻ,UNID,,21.2,1,1,both_langs
+360679.0,ἀλλ’,JOHN,817247.0,aył,SUBST,,21.23,1,1,both_langs
+,,JOHN,817281.0,áyl,UNID,more,21.25,0,1,only_Arm
+344231.0,ἀλλ’,JOHN,802224.0,ayl,SUBST,,3.16,1,1,both_langs
+344251.0,ἀλλ’,JOHN,802243.0,aył,SUBST,,3.17,1,1,both_langs
+344488.0,ἀλλ’,JOHN,802450.0,aył,ADVER,(like SUBST),3.28,1,1,both_langs
+344641.0,ἀλλ’,JOHN,,,SUBST,CA has ayl,3.36,1,0,only_Gr
+344073.0,ἀλλ’,JOHN,851321.0,ayl,ADVER,good concession,3.8,1,1,both_langs
+344913.0,ἀλλὰ,JOHN,852711.0,ayl,SUBST,,4.14,1,1,both_langs
+344674.0,ἀλλ’,JOHN,852467.0,ayl,SUBST,,4.2,1,1,both_langs
+345084.0,ἀλλὰ,JOHN,803019.0,Aył,ADVER,?,4.23,1,1,both_langs
+345373.0,ἄλλοι,JOHN,803307.0,aylkʻ,UNID,,4.38,1,1,both_langs
+,,JOHN,803419.0,Aył,ADVER,"then (when…)', Greek te it seems",4.45,0,1,only_Arm
+346025.0,ἀλλὰ,JOHN,853199.0,ayl,SUBST,ew,5.18,1,1,both_langs
+346132.0,ἀλλὰ,JOHN,804026.0,aył,ADVER,except/ but,5.22,1,1,both_langs
+346187.0,ἀλλὰ,JOHN,804087.0,aył,SUBST,??,5.24,1,1,both_langs
+346336.0,ἄλλος,JOHN,804224.0,áyl,UNID,,5.32,1,1,both_langs
+,,JOHN,853260.0,Aył,ADVER,,5.36,0,1,only_Arm
+346515.0,ἀλλὰ,JOHN,804407.0,aył,SUBST,,5.42,1,1,both_langs
+346543.0,ἄλλος,JOHN,804432.0,ayl,UNID,,5.43,1,1,both_langs
+345826.0,ἄλλος,JOHN,853131.0,áyl,UNID,,5.7,1,1,both_langs
+,,JOHN,858876.0,ayl,UNID,,6.22,0,1,only_Arm
+347034.0,ἄλλα,JOHN,858942.0,áyl,UNID,,6.23,1,1,both_langs
+347112.0,ἀλλ’,JOHN,804963.0,aył,SUBST,,6.26,1,1,both_langs
+347128.0,ἀλλὰ,JOHN,804978.0,aył,SUBST,,6.27,1,1,both_langs
+347250.0,ἀλλ’,JOHN,805081.0,ayl,SUBST,,6.32,1,1,both_langs
+347326.0,ἀλλ’,JOHN,805144.0,Ayl,ADVER,,6.36,1,1,both_langs
+347368.0,ἀλλὰ,JOHN,805182.0,aył,SUBST,,6.38,1,1,both_langs
+347394.0,ἀλλὰ,JOHN,859030.0,aył,SUBST,,6.39,1,1,both_langs
+,,JOHN,858716.0,aył,ADVER,Greek word gap,6.6,0,1,only_Arm
+346762.0,ἀλλὰ,JOHN,804629.0,aył,ADVER,,6.9,1,1,both_langs
+348222.0,ἀλλ’,JOHN,853480.0,aył,SUBST,,7.10,1,1,both_langs
+348319.0,ἀλλὰ,JOHN,806008.0,aył,SUBST,,7.16,1,1,both_langs
+348435.0,ἀλλ’,JOHN,806125.0,aył,SUBST,,7.22,1,1,both_langs
+348475.0,ἀλλὰ,JOHN,806164.0,aył,SUBST,,7.24,1,1,both_langs
+348516.0,ἀλλὰ,JOHN,806203.0,Aył,ADVER,,7.27,1,1,both_langs
+348558.0,ἀλλ’,JOHN,806242.0,aył,SUBST,,7.28,1,1,both_langs
+,,JOHN,806497.0,Ayłkʻ,UNID,,7.41,0,1,only_Arm
+348877.0,ἀλλ’,JOHN,806550.0,aył,ADVER,,7.44,1,1,both_langs
+348944.0,ἀλλὰ,JOHN,806616.0,ayl,ADVER,,7.49,1,1,both_langs
+349449.0,ἀλλ’,JOHN,806783.0,ayl,SUBST,,8.12,1,1,both_langs
+349539.0,ἀλλ’,JOHN,806868.0,aył,SUBST,,8.16,1,1,both_langs
+349765.0,ἀλλ’,JOHN,807081.0,aył,ADVER,?,8.26,1,1,both_langs
+349817.0,ἀλλὰ,JOHN,807132.0,ayl,SUBST,,8.28,1,1,both_langs
+349966.0,ἀλλὰ,JOHN,807265.0,aył,ADVER,,8.37,1,1,both_langs
+,,JOHN,807318.0,aył,ADVER,,8.40,0,1,only_Arm
+350105.0,ἀλλ’,JOHN,807392.0,aył,SUBST,,8.42,1,1,both_langs
+350263.0,ἀλλὰ,JOHN,807531.0,ayl,SUBST,,8.49,1,1,both_langs
+350418.0,ἀλλὰ,JOHN,807678.0,aył,ADVER,,8.55,1,1,both_langs
+350795.0,ἄλλοι,JOHN,,,UNID,,9.16,1,0,only_Gr
+350533.0,ἀλλ’,JOHN,807789.0,aył,ADVER,,9.3,1,1,both_langs
+351121.0,ἀλλ’,JOHN,,,ADVER,,9.31,1,0,only_Gr
+321103.0,ἀλλὰ,LUKE,735873.0,aył,SUBST,in dialogue,1.60,1,1,both_langs
+,,LUKE,744040.0,ayl,SUBST,,10.20,0,1,only_Arm
+,,LUKE,744821.0,ayłkʻ,UNID,,11.16,0,1,only_Arm
+,,LUKE,794791.0,aył,UNID,,11.26,0,1,only_Arm
+331059.0,ἀλλ’,LUKE,795020.0,aył,SUBST,,11.33,1,1,both_langs
+331226.0,ἀλλὰ,LUKE,745325.0,Aył,ADVER,,11.42,1,1,both_langs
+,,LUKE,795439.0,Aył,ADVER,like topic shift,12.11,0,1,only_Arm
+,,LUKE,795557.0,aylocʻ,UNID,,12.26,0,1,only_Arm
+,,LUKE,746134.0,Aył,ADVER,"Greek de, mb topic reintro",12.30,0,1,only_Arm
+,,LUKE,745669.0,Aył,ADVER,,12.5,0,1,only_Arm
+332529.0,ἀλλ’,LUKE,746511.0,ayl,SUBST,,12.51,1,1,both_langs
+331633.0,ἀλλὰ,LUKE,745707.0,aył,ADVER,like opp,12.7,1,1,both_langs
+332748.0,ἀλλ’,LUKE,746697.0,aył,ADVER,,13.3,1,1,both_langs
+333624.0,ἀλλ’,LUKE,747507.0,Aył,ADVER,topic shift,14.10,1,1,both_langs
+333711.0,ἀλλ’,LUKE,747595.0,Aył,SUBST,,14.13,1,1,both_langs
+,,LUKE,797948.0,aylowm,UNID,,14.31,0,1,only_Arm
+,,LUKE,748001.0,aył,SUBST,,14.35,0,1,only_Arm
+,,LUKE,798963.0,aył,ADVER,? Greek de kai,15.32,0,1,only_Arm
+,,LUKE,748987.0,aył,UNID,,16.18,0,1,only_Arm
+335462.0,ἀλλ’,LUKE,,,ADVER,,16.30,1,0,only_Gr
+335640.0,ἀλλ’,LUKE,749382.0,aył,SUBST,,17.8,1,1,both_langs
+,,LUKE,799407.0,ayls,UNID,,18.11,0,1,only_Arm
+,,LUKE,750078.0,aył,SUBST,,18.12,0,1,only_Arm
+336418.0,ἀλλ’,LUKE,799437.0,aył,SUBST,,18.13,1,1,both_langs
+,,LUKE,750463.0,ayl,SUBST,but originally AND kai,18.34,0,1,only_Arm
+,,LUKE,736762.0,aył,SUBST,but originally AND kai,2.37,0,1,only_Arm
+338129.0,ἄλλοις,LUKE,751718.0,ayłocʻ,UNID,,20.16,1,1,both_langs
+338256.0,ἀλλ’,LUKE,751838.0,aył,SUBST,,20.21,1,1,both_langs
+,,LUKE,752061.0,Aył,ADVER,??,20.37,0,1,only_Arm
+338522.0,ἀλλὰ,LUKE,752090.0,ayl,SUBST,,20.38,1,1,both_langs
+,,LUKE,752511.0,Aył,ADVER,Greek de,21.20,0,1,only_Arm
+338821.0,ἀλλ’,LUKE,752371.0,aył,ADVER,,21.9,1,1,both_langs
+,,LUKE,753298.0,aył,ADVER,?,22.32,0,1,only_Arm
+339929.0,ἀλλὰ,LUKE,753380.0,aył,ADVER,,22.36,1,1,both_langs
+340063.0,ἀλλὰ,LUKE,753506.0,aył,SUBST,,22.42,1,1,both_langs
+340258.0,ἀλλ’,LUKE,753689.0,aył,ADVER,,22.53,1,1,both_langs
+,,LUKE,753769.0,aył,UNID,,22.58,0,1,only_Arm
+340364.0,ἄλλος,LUKE,818845.0,aył,UNID,,22.59,1,1,both_langs
+,,LUKE,753896.0,áyl,UNID,nice like INCR,22.65,0,1,only_Arm
+,,LUKE,818995.0,aył,SUBST,,23.28,0,1,only_Arm
+,,LUKE,754544.0,ayl,UNID,,23.32,0,1,only_Arm
+341196.0,ἄλλους,LUKE,754610.0,ayls,UNID,,23.35,1,1,both_langs
+,,LUKE,850023.0,aył,UNID,,24.1,0,1,only_Arm
+,,LUKE,755109.0,áylkʻ,UNID,,24.10,0,1,only_Arm
+341903.0,ἀλλά,LUKE,850080.0,Aył,ADVER,ew?,24.21,1,1,both_langs
+341918.0,ἀλλὰ,LUKE,755335.0,Aył,ADVER,"ew, free",24.22,1,1,both_langs
+341641.0,ἀλλὰ,LUKE,850049.0,aył,SUBST,,24.6,1,1,both_langs
+,,LUKE,755097.0,aylócʻ,UNID,,24.9,0,1,only_Arm
+,,LUKE,737378.0,áyl,UNID,,3.18,0,1,only_Arm
+,,LUKE,785746.0,aył,SUBST,,4.4,0,1,only_Arm
+,,LUKE,786820.0,aylocʻ,UNID,,4.43,0,1,only_Arm
+324181.0,ἀλλὰ,LUKE,738790.0,aył,ADVER,,5.14,1,1,both_langs
+,,LUKE,739002.0,Aył,ADVER,,5.24,0,1,only_Arm
+324521.0,ἄλλων,LUKE,739118.0,aylócʻ,UNID,,5.29,1,1,both_langs
+324567.0,ἀλλὰ,LUKE,739162.0,ayl,SUBST,,5.31,1,1,both_langs
+324576.0,ἀλλὰ,LUKE,739169.0,aył,SUBST,good example,5.32,1,1,both_langs
+324720.0,ἀλλὰ,LUKE,739294.0,aył,ADVER,,5.38,1,1,both_langs
+325290.0,Ἀλλὰ,LUKE,739840.0,Ayl,ADVER,,6.27,1,1,both_langs
+325327.0,ἄλλην,LUKE,,,UNID,,6.29,1,0,only_Gr
+326210.0,ἄλλον,LUKE,791651.0,aylowm,UNID,,7.19,1,1,both_langs
+326236.0,ἄλλον,LUKE,791661.0,aylowm,UNID,,7.20,1,1,both_langs
+326325.0,ἀλλὰ,LUKE,740809.0,Aył,ADVER,,7.25,1,1,both_langs
+326349.0,ἀλλὰ,LUKE,791744.0,Aył,ADVER,,7.26,1,1,both_langs
+325942.0,ἀλλὰ,LUKE,740445.0,ayl,ADVER,,7.7,1,1,both_langs
+760339.0,ἄλλῳ,LUKE,740473.0,aylowm,UNID,,7.8,1,1,both_langs
+,,LUKE,741472.0,aylocʻ,UNID,,8.10,0,1,only_Arm
+327482.0,ἀλλ’,LUKE,741853.0,aył,SUBST,,8.27,1,1,both_langs
+,,LUKE,792482.0,áylkʻ,UNID,,8.3,0,1,only_Arm
+328059.0,ἀλλὰ,LUKE,742395.0,ayl,SUBST,,8.52,1,1,both_langs
+,,LUKE,792493.0,ayl,UNID,ошибка токенайзер,8.6,0,1,only_Arm
+,,LUKE,741411.0,ayl,UNID,ошибка токенайзер,8.7,0,1,only_Arm
+,,LUKE,741427.0,aył,UNID,,8.8,0,1,only_Arm
+,,LUKE,743654.0,aył,UNID,,9.61,0,1,only_Arm
+328247.0,ἄλλων,LUKE,742575.0,aylocʻ,UNID,,9.8,1,1,both_langs
