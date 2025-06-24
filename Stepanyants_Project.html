@@ -670,8 +670,8 @@ cont_table</code></pre>
 <pre><code>##         Greek_found
 ## Function  0  1
 ##    SUBST  4 51</code></pre>
-<p>Неправильно применять тест, т.к. в одной ячейке всего 4
-наблюдения</p>
+<p>Неправильно применять тест, т.к. в одной ячейке всего 4 наблюдения.
+Но в целом без статистики при 4 против 51 не ожидаем связи.</p>
 <p>Неидентическое употребление</p>
 <pre class="r"><code>for_table &lt;- data[c(&#39;Gospel&#39;, &#39;Function&#39;, &#39;Greek_found&#39;, &#39;Armenian_found&#39;)] |&gt; filter(Gospel == &#39;JOHN&#39;) |&gt; filter(Armenian_found == 1) |&gt; filter(Function == &#39;UNID&#39;)
 for_table &lt;- for_table[c(&#39;Function&#39;, &#39;Greek_found&#39;)]
@@ -680,7 +680,8 @@ cont_table</code></pre>
 <pre><code>##         Greek_found
 ## Function  0  1
 ##     UNID  3 14</code></pre>
-<p>Неправильно применять тест, т.к. есть 3 наблюденпия.</p>
+<p>Неправильно применять тест, т.к. есть 3 наблюдения. Но в целом и без
+статистики при 3 против 14 не ожидаем связи.</p>
 </div>
 <div id="проверим-данные-для-евангелия-от-луки" class="section level3">
 <h3>Проверим данные для Евангелия от Луки</h3>
