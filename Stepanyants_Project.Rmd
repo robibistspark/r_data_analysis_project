@@ -1,0 +1,272 @@
+---
+title: "Stepanyants_Project"
+author: "Maxim Stepanyants"
+date: "2025-06-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libs, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+
+# Исследование: проверка наличия контактного влияние древнегреческого alla на древнеармянское ayl
+
+## Репозиторий
+https://github.com/robibistspark/r_data_analysis_project
+
+## Введение
+В древнеармянском языке есть единица ayl, тогда как в древнегреческом есть когнатные ей alla/allos (диахронически связанные: союз возник из "местоимения"). Известно, что др.-арм. переводы Евангелий делались главным образом с др.-греч. языка (в первую очередь в 5 веке) и что многие конструкции были калькированы. Др.-арм. единица ayl достаточно частотна (служебное слово), имеет, как и др.-греч. alla, три функции: 1) уступительная 'though', 2) заместительная 'but rather', 3) неидентичность 'other, else' (согласно моим наблюдениям по корпусу и изучению словарей; иногда выделяются другие, но, как кажется, они более периферийны).
+
+Исследование опирается на дипломную работу автора. В имеющейся индоевропеистической литературе по теме статистические выводы не делались, см. Klein, Jared S. 2022. Adversative Conjunction and Neighboring Discourse Features in Old Church Slavic (Codex Marianus), with Comparative Notes on the Same Phenomena in Greek, Gothic and Classical Armenian. Transactions of the Philological Society 120(1). 128–183. (doi:10.1111/1467-968X.12231).
+
+## Цель
+Количественно оценить, возможно ли, что древнеармянское ayl - калька древнегреческого alla в ряде своих употреблений?
+
+## Гипотезы
+1) Уступительные употребления ayl являются семантическими кальками, a остальные два типа употреблений не имеют контактного происхождения.
+2) Разницы в паттернах заимствований в двух Евангелиях нет. 
+
+```{r load_data}
+data <- read_csv('data.csv') |> as.data.frame()
+head(data)
+```
+
+## Используемые данные
+Из доступного при регистрации корпуса PROEIL (http://foni.uio.no/proiel/) скачаны результаты поиска в Евангелиях от Иоанна и от Луки (по леммам ayl, а также alla и allos), содержащие исследуемые единицы. Выравнивание (через JOIN) было сделано в pandas. Часть примеров имела соответсвующие единицы в обоих языках, а часть - только в каком-то одном. Из рассмотрения были исключены 21 др.-арм. пример и 17 др.-греч. примеров, если в них было больше одного вхождения единиц, т.к. это затрудняло выравнивание (при этом немалая доля этих примеров относятся к одному и тожму же контексту - "переводной единицы"). Контексты были вручную очищены от ошибок токенизатора в интересующих местах.
+
+```{r filter_data}
+data <- data[c('Gospel', 'Function', 'where_found', 'Greek_found', 'Armenian_found')]
+head(data)
+```
+
+## Разметка
+Контексты размечены по функции интересующей единицы в контексте с помощью английских и русских переводов Евангелий и данных морфологической разметки из PROEIL и с сайта проекта Arak29 (https://bible.zoraweb.com/index.htm). Затем 13 контекстов были исключены из рассмотрения (в них были эквивалентные предложения, идиоматические употребления ayl, ошибки в текст, единицы встречались в разных стихах). Всего в итоговых датасет вошло 206 контекстов. Оговоримся, что разметка сделана техническим образом и для большего доверия к данным требует проверки экперта по обоим древним языкам (около 40 контекстов вызывали сомнение, но были сохранены).
+
+## Переменные
+Евангелие-источник, функция в контектсе, наличие единицы в др.-арм. и наличие в др.-греч, эти же две в кортеже. Контексты размечены по трём функциям, которые есть у исследуемых единиц. Так же в датасете есть, но не исследуются: обозначение главы и стиха, словоформа токена и его ID из PROEIL для каждого языка, комментарий при разметке. В датасете есть пустые значения, наследуемые исходным данным.
+
+## Описательная статистика
+Распределение наличия единицы в обоих фрагментах, источников, функций.
+
+```{r proportions}
+data |> mutate_all(as.factor) |> summary()
+```
+
+```{r proportions_John}
+data |> mutate_all(as.factor) |> filter(Gospel == 'JOHN') |> summary()
+```
+
+```{r proportions_Luke}
+data |> mutate_all(as.factor) |> filter(Gospel == 'LUKE') |> summary()
+```
+```{r visualization_1}
+gospels <- c(rep("Both", 3), rep("John", 3),
+            rep("Luke", 3))
+
+functions <- rep(c("Adver", "Subst", "Unid"), 3)
+
+values <- c(71, 79, 56, 47, 58, 27, 24, 21, 29)
+
+dataframe <- data.frame(gospels, functions, values)
+
+ggplot(dataframe, aes(fill = functions,
+                      y = values, x = gospels)) +
+geom_bar(position = "stack", stat = "identity") +
+ggtitle("Functions across sources") +
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+```{r visualization_2}
+gospels <- c(rep("Both", 3), rep("John", 3),
+            rep("Luke", 3))
+
+functions <- rep(c("Both", "Ancient Greek", "Classical Armenian"), 3)
+
+values <- c(136, 53, 17, 99, 18, 15, 37, 35, 2)
+
+dataframe <- data.frame(gospels, functions, values)
+
+ggplot(dataframe, aes(fill = functions,
+                      y = values, x = gospels)) +
+geom_bar(position = "stack", stat = "identity") +
+ggtitle("Presence of units in question in languages across sources") +
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+## Методы анализа
+Статистический тест Хи-квадрат Пирсона. Применяется для оценки связи между совместно встречающимися переменными. Необходимые допущения: случайная выборка данных, независимость наблюдений, не слишком мало наблюдений. (Ещё можно посчитать Точный тест Фишера, т.к. табличка сопряжённости маленькая.) Применяется к таблицам сопряжённости для каждой из трёх функций и наличия в др.-греч. тексте единицы alla/ allos. Рассматриваем отдельно все данные вместе и два Евангелия.
+
+### Проверим наличие связи на табличке со всеми функциями
+
+```{r table_chisq_q}
+for_table <- data[c('Function', 'Greek_found', 'Armenian_found')] |> filter(Armenian_found == 1)
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+Применим тест.
+
+```{r chisq_q}
+chisq.test(cont_table)
+```
+Тест хи-квадрат при значениях X-squared = 18.802, df = 2 показал p-value < 0.01, т.е. при уровне значимости 0.99 в этих данных есть связь (альтернативная гипотеза). Это означает, что в целом обнаруживается связь между употреблениями др.-арм. ayl в уступительной функции и наличием в оригинальном тексте alla/allos.
+
+Далее будем рассматривать конкретные функции и разные Евангелия.
+
+### Проверим данные из обоих Евангелий вместе
+
+Уступительное употребление
+
+```{r table_chisq}
+for_table <- data[c('Function', 'Greek_found', 'Armenian_found')] |> filter(Armenian_found == 1) |> filter(Function == 'ADVER')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+Применим тест.
+
+```{r chisq}
+chisq.test(cont_table)
+```
+
+Тест хи-квадрат при значениях X-squared = 13.235, df = 1 показал p-value < 0.01, т.е. при уровне значимости 0.99 в этих данных есть связь (альтернативная гипотеза). Это означает, что обнаруживается связь между употреблениями др.-арм. ayl в уступительной функции и наличием в оригинальном тексте alla/allos.
+
+Заместительное употребление
+
+```{r table_chisq_2}
+for_table <- data[c('Function', 'Greek_found', 'Armenian_found')] |> filter(Armenian_found == 1) |> filter(Function == 'SUBST')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_2}
+chisq.test(cont_table)
+```
+
+Тест хи-квадрат при значениях X-squared = 38.368, df = 1 показал p-value < 0.01, т.е. при уровне значимости 0.99 в этих данных есть связь (альтернативная гипотеза). Значит, связь между наличием в оригинале alla/allos и употреблением ayl в этой функции тоже есть.
+
+Неидентическое употребление
+
+```{r table_chisq_3}
+for_table <- data[c('Function', 'Greek_found', 'Armenian_found')] |> filter(Armenian_found == 1) |> filter(Function == 'UNID')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_3}
+chisq.test(cont_table)
+```
+Тест хи-квадрат при значениях X-squared = 0.022222, df = 1 показал p-value > 0.01, т.е. при уровне значимости 0.99 в этих данных не обнаруживается связь (нулевая гипотеза). Значит, связь между наличием в оригинале alla/allos и употреблением ayl в этой функции не установлена на этих данных.
+
+### Проверим данные для Евангелия от Иоанна
+
+Уступительное употребление
+
+```{r table_chisq_a}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'JOHN') |> filter(Armenian_found == 1) |> filter(Function == 'ADVER')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_a}
+chisq.test(cont_table)
+```
+
+Тест хи-квадрат при значениях X-squared = 11.756, df = 1 показал p-value < 0.01, т.е. при уровне значимости 0.99 в этих данных есть связь (альтернативная гипотеза). Это означает, что обнаруживается связь между употреблениями др.-арм. ayl в уступительной функции и наличием в оригинальном тексте alla/allos.
+
+Заместительное употребление
+
+```{r table_chisq_2_a}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'JOHN') |> filter(Armenian_found == 1) |> filter(Function == 'SUBST')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Неправильно применять тест, т.к. в одной ячейке всего 4 наблюдения
+
+Неидентическое употребление
+
+```{r table_chisq_3_a}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'JOHN') |> filter(Armenian_found == 1) |> filter(Function == 'UNID')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Неправильно применять тест, т.к. есть 3 наблюденпия.
+
+
+### Проверим данные для Евангелия от Луки
+
+Уступительное употребление
+
+```{r table_chisq_b}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'LUKE') |> filter(Armenian_found == 1) |> filter(Function == 'ADVER')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_b}
+chisq.test(cont_table)
+```
+
+Тест хи-квадрат при значениях X-squared = 2.1304, df = 1 показал p-value > 0.01, т.е. при уровне значимости 0.99 в этих данных связи нет (нулевая гипотеза). Это отличается от первого рассмотренного Евангелия.
+
+Заместительное употребление
+
+```{r table_chisq_2_b}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'LUKE') |> filter(Armenian_found == 1) |> filter(Function == 'SUBST')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_2_b}
+chisq.test(cont_table)
+```
+
+Тест хи-квадрат при значениях X-squared = 2.3333, df = 1 показал p-value > 0.01, т.е. при уровне значимости 0.99 в этих данных связи нет (нулевая гипотеза). Это отличается от первого рассмотренного Евангелия (если верить тому результату).
+
+Неидентическое употребление
+
+```{r table_chisq_3_b}
+for_table <- data[c('Gospel', 'Function', 'Greek_found', 'Armenian_found')] |> filter(Gospel == 'LUKE') |> filter(Armenian_found == 1) |> filter(Function == 'UNID')
+for_table <- for_table[c('Function', 'Greek_found')]
+cont_table = table(for_table)
+cont_table
+```
+
+Применим тест.
+
+```{r chisq_3_b}
+chisq.test(cont_table)
+```
+Тест хи-квадрат при значениях X-squared = 7.1176, df = 1 показал p-value > 0.01, т.е. при уровне значимости 0.99 в этих данных не обнаруживается связь (нулевая гипотеза). Однако при уровне значимости 0.95 (тоже адекватном для языковых данных) связь уже устанавливается. Сравнить с другим Евангелием нет возможности.
+
+## Обобщение
+
+В целом связь между ayl и наличием в оригинальном контексте alla/allos обнаруживается. При рассмотрении данных обоих Евангелий вместе обнаруживается статистически значимая связь для уступительной и заместительной функций, а для неидентической не обнаруживается. В Евангелии от Иоанна обнаруживается связь для уступительной функции, а для двух других тест применять неправильно. В Евангелии от Луки для уступительной функции и для заместительной функции связи не обнаружено, вразрез результатам аналогичных тестов. Отчасти вразрез предыдущему, для неидентической функции при понижении уровня доверия до 0.95 (достаточно адекватного для языковых данных) связь выявляется.
+
+## Заключение
+
+Гипотезы подтвердились лишь частично. Для дальнейшего развития исследования (насколько это возможно) полезно было бы увеличить объёмы выборок (самое понятное - взять ещё два доступных  Евангелия), учесть данные о переводчиках, проверить разметку. Для более правильной лингвистической интерпретации нужно привлекать данные из непереводных текстов. Можно использовать Точный тест Фишера. Базовые сравнения вроде частотности осложнены необходимостью разметки на двух языках (важны конкретные функции).
